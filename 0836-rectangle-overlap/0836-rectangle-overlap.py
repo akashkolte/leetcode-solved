@@ -3,4 +3,6 @@ class Solution:
         x1, y1, x2, y2 = rec1
         x3, y3, x4, y4 = rec2
 
-        return not (y3 >= y2 or y4 <= y1 or x3 >= x2 or x4 <= x1)
+        return (
+            max(x1, x3) < min(x2, x4) and max(y1, y3) < min(y2, y4)
+        )
